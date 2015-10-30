@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html ng-app="tangram">
+<html ng-app="angularjs-frontend">
 <head>
     <!-- Bootstrap and FontAwesome -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
 </head>
 <body>
 
@@ -16,20 +16,20 @@
             </div>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-                <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
-                <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+                <li><a ui-sref="home"><i class="fa fa-home"></i> Home</a></li>
+                <li><a ui-sref="about"><i class="fa fa-shield"></i> About</a></li>
+                <li><a ui-sref="contact"><i class="fa fa-comment"></i> Contact</a></li>
             </ul>
         </div>
         </nav>
     </header>
 
     <!-- Content -->
-    <div ng-view></div>
+    <div ui-view></div>
 
     <!-- AngularJS Stuffs -->
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
     <script src="app.js"></script>
     <script src="controllers/MainController.js"></script>
     <script src="controllers/AboutController.js"></script>
