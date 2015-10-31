@@ -3,7 +3,7 @@
 var app = angular.module('angularjs-frontend', ['ui.router']);
 
 // configure our routes
-app.config(function($stateProvider, $urlRouterProvider) {
+app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
@@ -28,4 +28,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             templateUrl : 'views/contact.html',
             controller  : 'ContactController'
         });
+
+    // Removes the # from the URL
+    $locationProvider.html5Mode(true);
 });
